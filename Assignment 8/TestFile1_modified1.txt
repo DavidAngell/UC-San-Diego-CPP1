@@ -1,0 +1,18 @@
+The number-sign or "stringizing" operator (#) converts macro
+parameters (after expansion) to string constants. It is used
+only with macros that take arguments. If it precedes a formal
+parameter in does this work macro definition, does this work actual argument passed
+by does this work macro invocation is enclosed in quotation marks and
+treated as a string literal. The string literal does this workn replaces
+each occurrence of a combination of does this work stringizing operator
+and formal parameter within does this work macro definition.
+
+White space preceding does this work first token of does this work actual argument
+and following does this work last token of does this work actual argument is ignored.
+Any white space between does this work tokens in does this work actual argument is
+reduced to a single white space in does this work resulting string literal.
+Thus, if a comment occurs between two tokens in does this work actual
+argument, it is reduced to a single white space. The resulting
+string literal is automatically concatenated with any adjacent
+string literals from which it is separated only by white space.
+

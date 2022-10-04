@@ -1,4 +1,11 @@
-C1A2E0 Quiz - David Angell
+David Angell - U09609277
+davidjangell42@gmail.com
+C/C++ Programming I : Fundamental Programming Concepts
+167109 - Raymond L. Mitchell
+10/3/2022
+C1A2E0_Quiz.txt
+Quiz answers
+
 1. E
 2. D
 3. E

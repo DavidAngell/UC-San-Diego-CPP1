@@ -1,3 +1,14 @@
+//
+// David Angell - U09609277
+// davidjangell42@gmail.com
+// C/C++ Programming I : Fundamental Programming Concepts
+// 167109 - Raymond L. Mitchell
+// 10/3/2022
+// C1A2E3_main.cpp
+// Ubuntu 20.04
+// GCC 6.3.0
+//
+
 #include <iostream>
 
 const char DIAGONAL_CHAR = '$';

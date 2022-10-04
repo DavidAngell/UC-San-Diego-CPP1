@@ -13,15 +13,22 @@
 
 const char DIAGONAL_CHAR = '$';
 
-int main(int argc, char const *argv[]) {
+int main() {
+    // Get user input
     int userInput;
     std::cout << "Enter any positive decimal integer: ";
     std::cin >> userInput;
-
+    
+    // set user input equal to the starting count to that the 
+    // first digit printed is equal to the ones place of the user input
     int count = userInput;
-    for (size_t row = 0; row < userInput; row++) {
-        for (size_t col = 0; col < row; col++) {
-            std::cout << count % 10;
+
+    // print the triangle row by row and column by column, adding
+    // the DIAGONAL_CHAR to the last column of each row (starting from 0)
+    for (int row = 0; row < userInput; row++) {
+        for (int col = 0; col < row; col++) {
+            int countOnesPlace = count % 10;
+            std::cout << countOnesPlace;
             count++;
         }
 

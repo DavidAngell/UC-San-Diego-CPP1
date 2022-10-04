@@ -1,0 +1,6 @@
+from:(SubmissionReporter@MeanOldTeacher.com) OR
+from:(SubmissionReporter@meanoldteacher.com) OR
+from:(SubmissionReporter@KindOldTeacher.com) OR
+from:(SubmissionReporter@att.net) OR
+from:(SubmissionReporter@gmail.com) OR
+from:(SubmissionReporter@NiceOldTeacher.com)

@@ -29,8 +29,8 @@ int main() {
     // Iterate over letters of the alphabet (0-25) for all letters less than the
     // value inputted by the user (where 0 = A/a and 25 = Z/z) and print them
     for (int letterNum = 0; letterNum < userInput; letterNum++) {
-        char uppercaseLetter = (char) (UPPERCASE_START + letterNum);
-        char lowercaseLetter = (char) (LOWERCASE_START + letterNum);
+        char uppercaseLetter = char(UPPERCASE_START + letterNum);
+        char lowercaseLetter = char(LOWERCASE_START + letterNum);
         std::cout << "'" << uppercaseLetter << "' --> '" << lowercaseLetter << "'\n";
     }
     

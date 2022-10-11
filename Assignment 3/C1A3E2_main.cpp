@@ -19,7 +19,7 @@ int main() {
 
     std::cout << "\"" << std::oct << octalInput << "\" in reverse is \"";
 
-    bool isNegative = octalInput >= 0; 
+    bool isNegative = octalInput <= 0; 
     int reversed = 0;
     while (octalInput != 0) {
         int leastSignificantDigit = octalInput % BASE;
@@ -27,7 +27,7 @@ int main() {
         octalInput /= BASE;
     }
 
-    std::cout << std::oct << reversed << (isNegative) ? "\"" : "-\"";
+    std::cout << std::oct << reversed << ((isNegative) ? "-\"" : "\"");
     
     return 0;
 }

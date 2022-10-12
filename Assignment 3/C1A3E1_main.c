@@ -27,15 +27,20 @@
 #include <stdio.h>
 
 int main(void) {
+    // Get the user input
     int userInput;
     printf("Enter the number for your cubic sum: ");
     scanf("%i", &userInput);
 
-    printf("nbr    cubic sum\n");
-    printf("----------------\n");
+    printf(
+        "nbr    cubic sum\n"
+        "----------------\n"
+    );
 
+    // Calculate the cube of each nbr and add it to
+    // the previous sum until the number that the user inputs
     short lastCubeSum = 0;
-    for (int nbr = 0; nbr <= userInput; nbr++) {
+    for (short nbr = 0; nbr <= userInput; nbr++) {
         lastCubeSum += nbr * nbr * nbr;
         printf("%3i %10i\n", nbr, lastCubeSum);
     }

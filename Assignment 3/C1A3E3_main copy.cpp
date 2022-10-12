@@ -12,7 +12,7 @@
 //
 
 #include <iostream>
-const int BASE = 10;
+const int BASE = 8;
 
 int reverseInt(int num) {
     // Move the least significant digit of the num

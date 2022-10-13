@@ -8,27 +8,25 @@
 // Ubuntu 20.04
 // GCC 6.3.0
 //
-// Takes in a user input and prints it as words
-//
 
 #include <iostream>
-const int BASE = 10;
+#define BASE 10
 
-int reverseInt(int num) {
-    // Move the least significant digit of the num
-    // into reversed number until num has no more digits
-    int reversedNumber = 0;
-    while (num != 0) {
-        int leastSignificantDigit = num % BASE;
-        reversedNumber = reversedNumber * BASE + leastSignificantDigit;
-        num /= BASE;
+
+// reverse an integer
+int reverseInt(int input) {
+    bool isNegative = input <= 0; 
+    int reversed = 0;
+    while (input != 0) {
+        int leastSignificantDigit = input % BASE;
+        reversed = reversed * BASE + leastSignificantDigit;
+        input /= BASE;
     }
-    return reversedNumber;
+    return (isNegative) ? -reversed : reversed;
 }
 
+
 std::string digitAsWord(int digit) {
-    // Apparently I nned to put a comment 
-    // here to appease the static analysis gods
     switch (digit) {
         case 0: return "zero";
         case 1: return "one";
@@ -40,7 +38,6 @@ std::string digitAsWord(int digit) {
         case 7: return "seven";
         case 8: return "eight";
         case 9: return "nine";
-        default: return "you messed somthing up mr programmer";
     }
 }
 
@@ -52,34 +49,24 @@ std::string popLeastSignificantDigitInWords(int &num, std::string buffer) {
 
 int main() {
     // Get user input
-    int userInput;
+    int input;
     std::cout << "Enter an integer value: ";
-    std::cin >> userInput;
+    std::cin >> input;
 
-    std::cout << "\"" << userInput << "\" in words is \"";
-
-    /*
-        Store whether the number was negative so that we can
-        do all of our calculations as if the input were positive
-        because otherwise everything breaks
-    */
-    bool inputIsNegative = userInput < 0;
-    if (inputIsNegative) 
-        userInput = -userInput;
+    std::cout << "\"" << input << "\" in words is \"";
 
     // Reverse the input because the while loop goes in reverse order
-    int reversedInput = reverseInt(userInput);
+    int reversedInput = reverseInt(input);
 
     /*
         Add minus to the front of the input in words if it is negative.
         Otherwise, pop the last digit of the reversed input and make 
-        that the start of the output because otherwise the string would
+        that the start of the ouput because otherwise the string would
         start with a space which is incorrect formatting.
     */
-    std::string unreversedInputInWords = 
-        (inputIsNegative) 
-            ? "minus"
-            : popLeastSignificantDigitInWords(reversedInput, "");
+    std::string unreversedInputInWords = (input < 0) 
+        ? "minus "
+        : popLeastSignificantDigitInWords(reversedInput, "");
 
     // Pop the last digit and convert its corresponding word until
     // the reversed input has no more digits in it
@@ -87,7 +74,7 @@ int main() {
         unreversedInputInWords += popLeastSignificantDigitInWords(reversedInput, " ");
 
     // Print the input as words and add an ending quote 
-    std::cout << unreversedInputInWords << "\"\n";
+    std::cout << unreversedInputInWords << "\"";
 
     return 0;
 }

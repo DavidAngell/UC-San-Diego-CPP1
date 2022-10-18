@@ -11,12 +11,12 @@
 // Defines all the overloaded versions of the PrintLines function
 //
 
-#ifndef PRINT_LINES_H
-#define PRINT_LINES_H
+#ifndef C1A4E2_PRINTLINES_H
+#define C1A4E2_PRINTLINES_H
 
-void PrintLines(char charValue, int charCount, int lineCount);
-void PrintLines(char charValue, int charCount);
-void PrintLines(char charValue);
+void PrintLines(int charValue, int charCount, int lineCount);
+void PrintLines(int charValue, int charCount);
+void PrintLines(int charValue);
 void PrintLines();
 
 #endif

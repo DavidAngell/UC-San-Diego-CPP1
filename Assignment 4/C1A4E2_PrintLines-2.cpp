@@ -8,15 +8,19 @@
 // Ubuntu 20.04
 // GCC 6.3.0
 //
-// Overloads the PrintLines function to print the user's
-// inputed character for the user's inputed count
+// Overloads the PrintLines function to print the
+// inputted character for the inputted count
 //
 
 #include <iostream>
 
-void PrintLines(char charValue, int charCount) {
+/// @brief Prints the inputted character for the inputted count
+/// @param charValue The character to print
+/// @param charCount The number of times to print the character
+void PrintLines(int charValue, int charCount) {
+    // Print the character cout times
     for (int character = 0; character < charCount; character++) {
-        std::cout << charValue;
+        std::cout << static_cast<char>(charValue);
     }
     
     std::cout << "\n";

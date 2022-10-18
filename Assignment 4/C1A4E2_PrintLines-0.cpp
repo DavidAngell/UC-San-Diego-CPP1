@@ -13,6 +13,7 @@
 
 #include <iostream>
 
+/// @brief Prints the character 'Z' once
 void PrintLines() {
     std::cout << "Z\n";
 }

@@ -24,17 +24,16 @@ int main() {
     // Output the maximum of the 3 values using the macro
     std::cout 
         << "mMaxOf3(" << value1 << ", " << value2 << ", " << value3 << ")"
-        << " returned " 
+           " returned " 
         << mMaxOf3(value1, value2, value3) 
         << "\n";
 
     // Output the maximum of the 3 values using the inline function
     std::cout 
         << "fMaxOf3(" << value1 << ", " << value2 << ", " << value3 << ")"
-        << " returned " 
+           " returned " 
         << fMaxOf3(value1, value2, value3)
         << "\n";
-
 
     return 0;
 }

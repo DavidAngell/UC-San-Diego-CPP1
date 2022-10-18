@@ -8,12 +8,14 @@
 // Ubuntu 20.04
 // GCC 6.3.0
 //
-// Overloads the PrintLines function to print the user's 
-// inputed character once
+// Overloads the PrintLines function to print the inputted
+// character once
 //
 
 #include <iostream>
 
-void PrintLines(char charValue) {
-    std::cout << charValue << "\n";
+/// @brief Prints the inputted character once
+/// @param charValue 
+void PrintLines(int charValue) {
+    std::cout << static_cast<char>(charValue) << "\n";
 }

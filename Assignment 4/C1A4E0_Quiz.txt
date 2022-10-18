@@ -1,0 +1,14 @@
+David Angell - U09609277
+davidjangell42@gmail.com
+C/C++ Programming I : Fundamental Programming Concepts
+167109 - Raymond L. Mitchell
+10/18/2022
+C1A4E0_Quiz.txt
+Quiz answers
+
+1. E
+2. E
+3. E
+4. C
+5. B
+6. C
